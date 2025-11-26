@@ -1,3 +1,4 @@
+
 /* --- PAPIRBAKGRUNN --- */
 body {
   margin: 0;
@@ -32,6 +33,13 @@ body {
   box-shadow: 0 0 14px #ffdce8, 0 0 30px #ffe6ef;
 }
 
+/* Sørg for at <a> med pink-btn også ser ut som knapper */
+a.pink-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
 /* Knapperad */
 .button-row {
   display: flex;
@@ -60,15 +68,16 @@ body {
   max-width: 900px;
   margin: 60px auto;
   position: relative;
-  padding: 0;
+  padding: 2rem;
   border-radius: 20px;
-  overflow: hidden;
   background: rgba(255, 255, 255, 0.25); /* glass-effekt */
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
   animation: float-up 1s ease forwards;
   opacity: 1;
   z-index: 2;
+  overflow: hidden;
+  min-height: 300px;
 }
 
 /* Fad inn etter animasjon */
@@ -122,12 +131,14 @@ body {
 
 /* Sentral tekst inni transparent hero */
 .hero-text.centered {
+  position: relative;
   text-align: center;
   color: #000;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 2rem;
   border-radius: 15px;
   backdrop-filter: blur(4px);
+  z-index: 3;
 }
 
 /* Sommerfugl-bakgrunnsillustrasjon under hero */
@@ -139,11 +150,5 @@ body {
   opacity: 0.1;
   pointer-events: none;
   z-index: 1;
-}
-/* Sørg for at .pink-btn fungerer på <a>-elementer også */
-a.pink-btn {
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
 }
 
