@@ -72,17 +72,17 @@ body {
     0 0 15px rgba(255, 255, 255, 0.1);
 
   animation: float-up 1s ease forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Fad inn etter animasjon */
 .fade-in {
-  opacity: 0;
+  opacity: 1;
 }
 
 @keyframes float-up {
   to { transform: translateY(0); opacity: 1; }
-  from { transform: translateY(50px); opacity: 0; }
+  from { transform: translateY(50px); opacity: 1; }
 }
 
 /* Transparent overlay for lesbar tekst */
@@ -132,6 +132,10 @@ body {
 }
 /* Bakgrunnsillustrasjon under heroboks */
 .background-illustration {
+  position: relative;
+  display: block;
+  margin: 80px auto 0;
+
   position: absolute;
   top: 55%; /* juster etter behov */
   left: 50%;
@@ -150,6 +154,10 @@ body {
 
 /* --- BAKGRUNNSILLUSTRASJON UNDER HEROBOKS --- */
 .background-illustration {
+  position: relative;
+  display: block;
+  margin: 80px auto 0;
+
   position: absolute;
   bottom: 0; /* 👈 Plasser ved bunnen */
   left: 50%;
@@ -178,5 +186,6 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(4px);
 }
+
 
 
