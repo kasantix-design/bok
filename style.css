@@ -151,9 +151,9 @@ body {
 /* --- BAKGRUNNSILLUSTRASJON UNDER HEROBOKS --- */
 .background-illustration {
   position: absolute;
-  top: 60%;
+  bottom: 0; /* 👈 Plasser ved bunnen */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 600px;
   opacity: 0.1;
   z-index: 0;
