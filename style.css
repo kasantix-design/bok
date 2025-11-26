@@ -134,7 +134,12 @@ body {
 .background-illustration {
   position: relative;
   display: block;
-  margin: 80px auto 0;
+  margin: 100px auto 0 auto;
+  width: 600px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}
 
   position: absolute;
   top: 55%; /* juster etter behov */
