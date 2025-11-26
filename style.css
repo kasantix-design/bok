@@ -148,4 +148,35 @@ body {
   z-index: 2;
 }
 
+/* --- BAKGRUNNSILLUSTRASJON UNDER HEROBOKS --- */
+.background-illustration {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- TRANSPARENT HERO --- */
+.hero.transparent {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: relative;
+}
+
+/* --- SENTRERT TEKST INNI TRANSPARENT HERO --- */
+.hero-text.centered {
+  text-align: center;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
 
