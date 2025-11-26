@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nytt Prosjekt</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bok – Forside</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER (litt ned på siden) -->
-<header class="main-header">
+<header class="header">
+  <div class="button-row">
+    <button class="pink-btn">Fly hjem</button>
+    <button class="pink-btn">Fly til boken</button>
+  </div>
 
-    <div class="header-content">
-
-        <!-- Sommerfugler på bakgrunn -->
-        <div class="pynt-row">
-            <img src="pynt1.png" class="pynt">
-            <img src="pynt2.png" class="pynt">
-            <img src="pynt3.png" class="pynt">
-            <img src="pynt4.png" class="pynt">
-            <img src="pynt5.png" class="pynt">
-        </div>
-
-        <!-- Knapper -->
-        <div class="header-buttons">
-            <a href="#" class="glitter-btn">Fly hjem</a>
-            <a href="#" class="glitter-btn">Fly til boken</a>
-        </div>
-
-    </div>
-
+  <div class="butterflies">
+    <img src="images/pynt1.png" class="butterfly">
+    <img src="images/pynt2.png" class="butterfly">
+    <img src="images/pynt3.png" class="butterfly">
+    <img src="images/pynt4.png" class="butterfly">
+  </div>
 </header>
 
 
-<!-- HERO-BOKS -->
-<section class="hero-box">
+<section class="hero fade-in">
+  <div class="hero-overlay"></div>
+  <img src="images/forsidebilde.jpg" class="hero-image">
 
-    <div class="hero-image-overlay">
-        <img src="bolla_5.jpg" class="hero-image">
-        <div class="hero-text">
-            <h1>Velkommen</h1>
-            <p>Her kommer en tekst som flyter over bildet uten å blokkere bakgrunnen.</p>
-        </div>
-    </div>
-
+  <div class="hero-text">
+    <h1>Velkommen til boken</h1>
+    <p>Oppdag historien. Pust. Utforsk.</p>
+  </div>
 </section>
 
-
-<footer class="footer">
-    © 2025 – Bøker til gode jenter
-</footer>
 
 </body>
 </html>
