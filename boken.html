@@ -11,27 +11,25 @@
 
 <header class="header">
   <div class="button-row">
-    <a href="index.html"><button class="pink-btn">← Tilbake</button></a>
+    <a href="index.html" class="pink-btn">← Tilbake</a>
   </div>
 </header>
 
+<!-- HERO-BOKS SOM FLYTER OG ER GJENNOMSIKTIG -->
 <section class="hero fade-in" style="background: transparent; box-shadow: none; backdrop-filter: none;">
+  <!-- Vi skjuler overlegg siden du ønsker full transparens -->
   <div class="hero-overlay" style="display: none;"></div>
 
-  <!-- PDF viewer -->
-  <iframe 
-    src="book.pdf" 
-    type="application/pdf"
-    width="100%" 
-    height="600px" 
-    style="border: none;">
-    Din nettleser støtter ikke visning av PDF. 
-    <a href="book.pdf">Last ned PDF</a>
-  </iframe>
+  <!-- INNHOLD INNI HEROBOKSEN -->
+  <div class="hero-text" style="color: black; backdrop-filter: blur(0); text-shadow: none; background-color: rgba(255, 255, 255, 0.15); padding: 2rem; border-radius: 15px;">
+    <h1>Last ned boken</h1>
+    <p>Du kan laste ned boken som PDF eller EPUB:</p>
 
-  <!-- EPUB fallback / lenke -->
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="book.epub" class="pink-btn" download>📥 Last ned EPUB</a>
+    <!-- PDF-NEDLASTING -->
+    <a href="book.pdf" class="pink-btn" download>📄 Last ned PDF</a>
+
+    <!-- EPUB-NEDLASTING -->
+    <a href="book.epub" class="pink-btn" download>📘 Last ned EPUB</a>
   </div>
 </section>
 
