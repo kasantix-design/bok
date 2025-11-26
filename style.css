@@ -67,7 +67,6 @@ a.pink-btn {
 .hero {
   max-width: 900px;
   margin: 60px auto;
-  position: static;
   padding: 2rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.25); /* glass-effekt */
@@ -90,14 +89,6 @@ a.pink-btn {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Hero-overlay for lesbar tekst */
-.hero-overlay {
-  position: relative;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-}
-
 /* Forsidebilde bak tekst */
 .hero-image {
   width: 100%;
@@ -110,10 +101,7 @@ a.pink-btn {
 
 /* Teksten oppå bildet */
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
   text-align: center;
   color: #FFFEFB;
   font-size: 1.5rem;
@@ -125,9 +113,8 @@ a.pink-btn {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-  position: static;
   padding: 2rem;
+  z-index: 2;
 }
 
 /* Sentral tekst inni transparent hero */
