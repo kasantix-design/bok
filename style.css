@@ -27,6 +27,13 @@ body {
   transition: 0.25s ease;
 }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 .pink-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 14px #ffdce8, 0 0 30px #ffe6ef;
