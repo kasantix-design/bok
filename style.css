@@ -1,141 +1,98 @@
-/* ------------------------------------
-   GLOBALT – Kunstpapir bakgrunn
------------------------------------- */
-
+/* --- PAPIRBAKGRUNN --- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+  background: url("images/papir.jpg") center/cover repeat;
+  font-family: "Georgia", serif;
+}
 
-    /* Elegant kunstpapir */
-    background-color: #f5efe4;
-    background-image: 
-        url("papirtekstur.jpg"); /* du kan bruke et bilde eller slette linjen */
-    background-size: cover;
-    background-attachment: fixed;
+/* --- HEADER --- */
+.header {
+  padding-top: 40px;
+  text-align: center;
+}
 
-    color: #2f2f2f;
+/* ROSA KNAPPER MED GLITTER */
+.pink-btn {
+  background: #f4b5c8;
+  padding: 1rem 2.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 10px #ffd9e4, 0 0 20px #ffe3ed;
+  transition: 0.25s ease;
+}
+
+.pink-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #ffdce8, 0 0 30px #ffe6ef;
+}
+
+/* --- SOMMERFUGLER --- */
+.butterflies {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.butterfly {
+  width: 70px;
+  height: auto;
+  image-rendering: crisp-edges;
 }
 
 
-
-/* ------------------------------------
-   HEADER – litt ned på siden
------------------------------------- */
-.main-header {
-    padding-top: 50px;
-    text-align: center;
-    position: relative;
+/* --- HERO-BOKS SOM FLYTER --- */
+.hero {
+  max-width: 900px;
+  margin: 60px auto;
+  position: relative;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+  animation: float-up 1s ease forwards;
+  opacity: 0;
 }
 
-
-
-/* Sommerfugler */
-.pynt-row {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+.fade-in {
+  opacity: 0;
 }
 
-.pynt {
-    height: 70px;
-    width: auto;
+@keyframes float-up {
+  to { transform: translateY(0); opacity: 1; }
+  from { transform: translateY(50px); opacity: 0; }
 }
 
-
-
-/* ------------------------------------
-   ROSA GLITTER-KNAPPER
------------------------------------- */
-.glitter-btn {
-    padding: 1rem 2rem;
-    background: #ffc7d9;
-    border-radius: 40px 40px 0 0;  /* halvrund oppe */
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #7a234a;
-    display: inline-block;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    position: relative;
-    overflow: hidden;
-    margin: 0 1rem;
-    transition: 0.3s ease;
+/* Transparent overlay for lesbar tekst */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(5px);
 }
 
-/* Glittereffekt */
-.glitter-btn::after {
-    content: "";
-    position: absolute;
-    top: -40%;
-    left: -40%;
-    width: 180%;
-    height: 180%;
-    background: linear-gradient(
-        130deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.6) 50%,
-        rgba(255,255,255,0) 100%
-    );
-    transform: rotate(25deg);
-    animation: glitter 4s infinite linear;
-}
-
-@keyframes glitter {
-    0% { transform: translateX(-200%) rotate(25deg); }
-    100% { transform: translateX(200%) rotate(25deg); }
-}
-
-.glitter-btn:hover {
-    transform: translateY(-4px);
-}
-
-
-
-/* ------------------------------------
-   HERO – transparent flytende boks
------------------------------------- */
-.hero-box {
-    margin: 4rem auto;
-    max-width: 900px;
-    padding: 0;
-    position: relative;
-}
-
-.hero-image-overlay {
-    position: relative;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
-}
-
-/* Transparent bilde */
+/* Forsidebildet */
 .hero-image {
-    width: 100%;
-    display: block;
-    opacity: 0.55; /* juster som du ønsker */
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
 }
 
-/* Tekst oppå bildet */
+/* Teksten oppå bildet */
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #3a2c2c;
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-}
-
-
-
-/* ------------------------------------
-   FOOTER
------------------------------------- */
-.footer {
-    text-align: center;
-    padding: 3rem 0;
-    opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #3b2e2e;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
