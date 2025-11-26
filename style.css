@@ -46,7 +46,6 @@ body {
   image-rendering: crisp-edges;
 }
 
-
 /* --- HERO-BOKS SOM FLYTER --- */
 .hero {
   max-width: 900px;
@@ -55,11 +54,21 @@ body {
   padding: 0;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+
+  /* Glassmorphisme-effekt */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+
+  /* Forsterket skygge for “flyt”-effekt */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.1);
+
   animation: float-up 1s ease forwards;
   opacity: 0;
 }
 
+/* Fad inn etter animasjon */
 .fade-in {
   opacity: 0;
 }
@@ -73,16 +82,18 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
 }
 
-/* Forsidebildet */
+/* Forsidebildet – mer dus/faded */
 .hero-image {
   width: 100%;
   height: 500px;
   object-fit: cover;
   position: relative;
+  opacity: 0.4; /* dus effekt */
+  filter: brightness(0.8) contrast(1.1);
 }
 
 /* Teksten oppå bildet */
