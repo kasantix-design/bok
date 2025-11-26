@@ -1,0 +1,141 @@
+/* ------------------------------------
+   GLOBALT – Kunstpapir bakgrunn
+------------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+
+    /* Elegant kunstpapir */
+    background-color: #f5efe4;
+    background-image: 
+        url("papirtekstur.jpg"); /* du kan bruke et bilde eller slette linjen */
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #2f2f2f;
+}
+
+
+
+/* ------------------------------------
+   HEADER – litt ned på siden
+------------------------------------ */
+.main-header {
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+/* Sommerfugler */
+.pynt-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pynt {
+    height: 70px;
+    width: auto;
+}
+
+
+
+/* ------------------------------------
+   ROSA GLITTER-KNAPPER
+------------------------------------ */
+.glitter-btn {
+    padding: 1rem 2rem;
+    background: #ffc7d9;
+    border-radius: 40px 40px 0 0;  /* halvrund oppe */
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7a234a;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition: 0.3s ease;
+}
+
+/* Glittereffekt */
+.glitter-btn::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: linear-gradient(
+        130deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.6) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: rotate(25deg);
+    animation: glitter 4s infinite linear;
+}
+
+@keyframes glitter {
+    0% { transform: translateX(-200%) rotate(25deg); }
+    100% { transform: translateX(200%) rotate(25deg); }
+}
+
+.glitter-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+
+/* ------------------------------------
+   HERO – transparent flytende boks
+------------------------------------ */
+.hero-box {
+    margin: 4rem auto;
+    max-width: 900px;
+    padding: 0;
+    position: relative;
+}
+
+.hero-image-overlay {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+
+/* Transparent bilde */
+.hero-image {
+    width: 100%;
+    display: block;
+    opacity: 0.55; /* juster som du ønsker */
+}
+
+/* Tekst oppå bildet */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #3a2c2c;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+}
+
+
+
+/* ------------------------------------
+   FOOTER
+------------------------------------ */
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+    opacity: 0.8;
+}
