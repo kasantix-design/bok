@@ -27,16 +27,18 @@ body {
   transition: 0.25s ease;
 }
 
+.pink-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #ffdce8, 0 0 30px #ffe6ef;
+}
+
+/* Knapperad */
 .button-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-}
-.pink-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 14px #ffdce8, 0 0 30px #ffe6ef;
 }
 
 /* --- SOMMERFUGLER --- */
@@ -61,18 +63,12 @@ body {
   padding: 0;
   border-radius: 20px;
   overflow: hidden;
-
-  /* Glassmorphisme-effekt */
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25); /* glass-effekt */
   backdrop-filter: blur(10px);
-
-  /* Forsterket skygge for “flyt”-effekt */
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 0 15px rgba(255, 255, 255, 0.1);
-
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
   animation: float-up 1s ease forwards;
   opacity: 1;
+  z-index: 2;
 }
 
 /* Fad inn etter animasjon */
@@ -81,11 +77,11 @@ body {
 }
 
 @keyframes float-up {
+  from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-  from { transform: translateY(50px); opacity: 1; }
 }
 
-/* Transparent overlay for lesbar tekst */
+/* Hero-overlay for lesbar tekst */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -93,13 +89,13 @@ body {
   backdrop-filter: blur(5px);
 }
 
-/* Forsidebildet – mer dus/faded */
+/* Forsidebilde bak tekst */
 .hero-image {
   width: 100%;
   height: 500px;
   object-fit: cover;
   position: relative;
-  opacity: 0.4; /* dus effekt */
+  opacity: 0.4;
   filter: brightness(0.8) contrast(1.1);
 }
 
@@ -114,66 +110,8 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 /* Transparent hero for boken.html */
-.hero.transparent {
-  background: rgba(255, 255, 255, 0.05); /* Svak lys bakgrunn for flyt-følelse */
-  backdrop-filter: blur(8px);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-}
-
-/* Sentraliser tekst og knapper */
-.hero-text.centered {
-  text-align: center;
-  color: #000;
-  text-shadow: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: 15px;
-}
-/* Bakgrunnsillustrasjon under heroboks */
-.background-illustration {
-  position: relative;
-  display: block;
-  margin: 100px auto 0 auto;
-  width: 600px;
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 1;
-}
-
-  position: absolute;
-  top: 55%; /* juster etter behov */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  opacity: 0.1; /* gjør den svak og subtil */
-  pointer-events: none; /* forstyrrer ikke klikking */
-  z-index: 0; /* sørger for at den er bak alt annet */
-}
-
-/* Sørg for at hero-boksen ligger foran */
-.hero {
-  position: relative;
-  z-index: 2;
-}
-
-/* --- BAKGRUNNSILLUSTRASJON UNDER HEROBOKS --- */
-.background-illustration {
-  position: relative;
-  display: block;
-  margin: 80px auto 0;
-
-  position: absolute;
-  bottom: 0; /* 👈 Plasser ved bunnen */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  opacity: 0.1;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* --- TRANSPARENT HERO --- */
 .hero.transparent {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
@@ -182,7 +120,7 @@ body {
   position: relative;
 }
 
-/* --- SENTRERT TEKST INNI TRANSPARENT HERO --- */
+/* Sentral tekst inni transparent hero */
 .hero-text.centered {
   text-align: center;
   color: #000;
@@ -192,5 +130,13 @@ body {
   backdrop-filter: blur(4px);
 }
 
-
-
+/* Sommerfugl-bakgrunnsillustrasjon under hero */
+.background-illustration {
+  position: relative;
+  display: block;
+  margin: 100px auto 0;
+  width: 600px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}
