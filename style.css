@@ -130,4 +130,22 @@ body {
   padding: 2rem;
   border-radius: 15px;
 }
+/* Bakgrunnsillustrasjon under heroboks */
+.background-illustration {
+  position: absolute;
+  top: 55%; /* juster etter behov */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  opacity: 0.1; /* gjør den svak og subtil */
+  pointer-events: none; /* forstyrrer ikke klikking */
+  z-index: 0; /* sørger for at den er bak alt annet */
+}
+
+/* Sørg for at hero-boksen ligger foran */
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
 
