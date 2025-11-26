@@ -140,3 +140,10 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+/* Sørg for at .pink-btn fungerer på <a>-elementer også */
+a.pink-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
